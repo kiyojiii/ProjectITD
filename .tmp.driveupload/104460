@@ -1,0 +1,66 @@
+[debug] [2023-03-04T13:40:40.644Z] ----------------------------------------------------------------------
+[debug] [2023-03-04T13:40:40.647Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-03-04T13:40:40.648Z] CLI Version:   11.24.0
+[debug] [2023-03-04T13:40:40.649Z] Platform:      win32
+[debug] [2023-03-04T13:40:40.649Z] Node Version:  v18.14.2
+[debug] [2023-03-04T13:40:40.650Z] Time:          Sat Mar 04 2023 21:40:40 GMT+0800 (Philippine Standard Time)
+[debug] [2023-03-04T13:40:40.651Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-03-04T13:40:40.764Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-03-04T13:40:40.765Z] > authorizing via signed-in user (acidicblitzz18@gmail.com)
+[debug] [2023-03-04T13:40:40.765Z] [iam] checking project itdproject-12c91 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-03-04T13:40:40.769Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/itdproject-12c91:testIamPermissions [none]
+[debug] [2023-03-04T13:40:40.769Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/itdproject-12c91:testIamPermissions x-goog-quota-user=projects/itdproject-12c91
+[debug] [2023-03-04T13:40:40.770Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/itdproject-12c91:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-03-04T13:40:41.859Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/itdproject-12c91:testIamPermissions 200
+[debug] [2023-03-04T13:40:41.859Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/itdproject-12c91:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-03-04T13:40:41.861Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/itdproject-12c91 [none]
+[debug] [2023-03-04T13:40:42.309Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/itdproject-12c91 200
+[debug] [2023-03-04T13:40:42.310Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/itdproject-12c91 {"projectId":"itdproject-12c91","projectNumber":"158737123945","displayName":"ITDProject","name":"projects/itdproject-12c91","resources":{"hostingSite":"itdproject-12c91"},"state":"ACTIVE","etag":"1_3c1baa50-7773-43b7-97a9-5faf0953e475"}
+[info] 
+[info] === Deploying to 'itdproject-12c91'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2023-03-04T13:40:42.317Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/itdproject-12c91/versions [none]
+[debug] [2023-03-04T13:40:42.317Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/itdproject-12c91/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2023-03-04T13:40:43.060Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/itdproject-12c91/versions 200
+[debug] [2023-03-04T13:40:43.060Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/itdproject-12c91/versions {"name":"projects/158737123945/sites/itdproject-12c91/versions/a2fb35c51fddfe4d","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[itdproject-12c91]: beginning deploy... 
+[info] i  hosting[itdproject-12c91]: found 14 files in dist 
+[debug] [2023-03-04T13:40:43.075Z] [hosting] uploading with 200 concurrency
+[debug] [2023-03-04T13:40:43.087Z] [hosting] hash cache [ZGlzdA] stored for 14 files
+[debug] [2023-03-04T13:40:43.088Z] [hosting][hash queue][FINAL] {"max":4,"min":1,"avg":1,"active":0,"complete":14,"success":14,"errored":0,"retried":0,"total":14,"elapsed":8}
+[debug] [2023-03-04T13:40:43.089Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/158737123945/sites/itdproject-12c91/versions/a2fb35c51fddfe4d:populateFiles [none]
+[debug] [2023-03-04T13:40:43.089Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/158737123945/sites/itdproject-12c91/versions/a2fb35c51fddfe4d:populateFiles {"files":{"/404.html":"daa499dd96d8229e73235345702ba32f0793f0c8e5c0d30e40e37a5872be57aa","/bg.jpg":"cbbfe5dca7618a0b1e7f379d3d7c0f470e3e689a104ddff7ca0ed73829725ce9","/bundle.js":"c9f924a0dee0e1a8f102dfa98aba44f7da908b223c9267ff1622f22c39e92e4c","/clint.png":"1b33d361c41a9e806f1c8ec8a92aa8803f073c69288e69bbd0fe354786de89d7","/home.png":"e98684432b8598926d7f87c741f47841263433bcd84388696f3b2a7e150aff95","/inazuma.jpg":"4529d15c93ec1448040d3ae2a9c1e6f13672fd0c2353cfd0fcc23a3fba03c02a","/index.php":"3b9a58dfe55b97b5df3969c4e91c8847b2c4f12769a9bf8385728d41abd7c575","/liyue.jpg":"d2626c35c67f106bf0bd0658192925f4f7f4754c691ff17e3f29c5935143eb9f","/liyuev2.jpg":"d275a0efd93f0a2590c031a47297c24e9e8c5bf7cc9059468951a916c96e5368","/portfolio.php":"83e437f0bba0a56e0358e63b4fe150ae4ce8e7bea91ca9e71fbe5a408a93c311","/sky.png":"6461e745a2a161a558fd5593432efaa83f4706c88a9301b95b76d92111704e8a","/styles.css":"04ce9e140d89e952b08c38b0fdbe3c9c0be70fa93d3c017104e95c0c0490cc8e","/styles2.css":"5ca3dbff0096b6bef1da9f5be6f5f79a150ebe1db92d5aa8a1d49223bebc6397","/teyvat.jpg":"c30be3dfb7f1f4f978c1afbe26f6fab286702ea5b5785a82ed4eec7ab4543f3b"}}
+[debug] [2023-03-04T13:40:43.689Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/158737123945/sites/itdproject-12c91/versions/a2fb35c51fddfe4d:populateFiles 200
+[debug] [2023-03-04T13:40:43.689Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/158737123945/sites/itdproject-12c91/versions/a2fb35c51fddfe4d:populateFiles {"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/itdproject-12c91/versions/a2fb35c51fddfe4d/files"}
+[debug] [2023-03-04T13:40:43.689Z] [hosting][populate queue][FINAL] {"max":604,"min":604,"avg":604,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":604}
+[debug] [2023-03-04T13:40:43.689Z] [hosting] uploads queued: 0
+[debug] [2023-03-04T13:40:43.689Z] [hosting][upload queue][FINAL] {"max":0,"min":9999999999,"avg":0,"active":0,"complete":0,"success":0,"errored":0,"retried":0,"total":0,"elapsed":1677937243689}
+[info] +  hosting[itdproject-12c91]: file upload complete 
+[debug] [2023-03-04T13:40:43.692Z] [hosting] deploy completed after 629ms
+[debug] [2023-03-04T13:40:43.694Z] [
+  {
+    "config": {
+      "public": "dist",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "site": "itdproject-12c91"
+    },
+    "version": "projects/158737123945/sites/itdproject-12c91/versions/a2fb35c51fddfe4d"
+  }
+]
+[info] i  hosting[itdproject-12c91]: finalizing version... 
+[debug] [2023-03-04T13:40:43.698Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/itdproject-12c91/versions/a2fb35c51fddfe4d updateMask=status%2Cconfig
+[debug] [2023-03-04T13:40:43.698Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/itdproject-12c91/versions/a2fb35c51fddfe4d {"status":"FINALIZED","config":{}}
+[debug] [2023-03-04T13:40:44.295Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/itdproject-12c91/versions/a2fb35c51fddfe4d 200
+[debug] [2023-03-04T13:40:44.295Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/itdproject-12c91/versions/a2fb35c51fddfe4d {"name":"projects/158737123945/sites/itdproject-12c91/versions/a2fb35c51fddfe4d","status":"FINALIZED","config":{},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2023-03-04T13:40:42.443963Z","createUser":{"email":"AcidicBlitzz18@gmail.com"},"finalizeTime":"2023-03-04T13:40:43.915787Z","finalizeUser":{"email":"AcidicBlitzz18@gmail.com"}}
+[debug] [2023-03-04T13:40:44.295Z] [hosting] finalized version for itdproject-12c91:[object Object]
+[info] +  hosting[itdproject-12c91]: version finalized 
+[info] i  hosting[itdproject-12c91]: releasing new version... 
+[debug] [2023-03-04T13:40:44.297Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/itdproject-12c91/channels/live/releases versionName=projects%2F158737123945%2Fsites%2Fitdproject-12c91%2Fversions%2Fa2fb35c51fddfe4d
+[debug] [2023-03-04T13:40:44.298Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/itdproject-12c91/channels/live/releases {}
+[debug] [2023-03-04T13:40:44.911Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/itdproject-12c91/channels/live/releases 200
