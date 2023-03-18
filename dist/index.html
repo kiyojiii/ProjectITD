@@ -12,17 +12,56 @@
 </head>
 
 <body>
+    <section class="showcase">
+        <header>
+            <h2 class="logo">CJV</h2>
+            <div class="toggle"></div>
+        </header>
 
-    <header>
-        <h2 class="logo"> Logo </h2>
-        <nav class="navigation">
-            <a href="#"> Home <span></span></a>
-            <a href="#"> About <span></span></a>
-            <a href="#"> Service <span></span></a>
-            <a href="signup.html"> Contact <span></span></a>
-        </nav>
-    </header>
+        <video src="bg.mp4" muted loop autoplay> </video>
 
+        <div class="overlay"></div>
+
+        <div class="text">
+            <h2> Hello </h2>
+            <h3> Welcome To My Webpage </h3>
+            <p> Here, you will find a collection of my thoughts, experiences, and passions. From my coding adventures
+                and unique creativity to my latest update on this website and our different laboratory activities, this website is a true reflection of who I
+                am. Whether you are looking for inspiration, entertainment, or just a glimpse into my life, I invite you
+                to explore and discover all that my webpage has to offer. So come on in, take a look around, and let's
+                connect!</p>
+            <a href="">Login</a>
+            <a href="signup.html">Register</a>
+        </div>
+
+        <ul class="social">
+            <li><a href="https://www.facebook.com/Kiyojiii" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <li><a href="https://twitter.com/Clinttoott" target="_blank"><i class="fab fa-twitter"></i></a>
+            <li><a href="https://www.linkedin.com/in/clint-joshua-velasquez-6b2976265/" target="_blank"><i
+                        class="fa-brands fa-linkedin"></i></a>
+        </ul>
+    </section>
+
+    <div class="menu">
+        <ul>
+            <li><a href="index.html"> Home </a></li>
+            <li><a href="#"> # </a></li>
+            <li><a href="#"> # </a></li>
+            <li><a href="#"> # </a></li>
+            <li><a href="#"> # </a></li>
+        </ul>
+    </div>
+
+    <script>
+        const menuToggle = document.querySelector('.toggle')
+        const showcase = document.querySelector('.showcase')
+
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active')
+            showcase.classList.toggle('active')
+        })
+    </script>
     <script src="script.js"></script>
 </body>
+
 </html>
