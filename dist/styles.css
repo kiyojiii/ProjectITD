@@ -101,11 +101,26 @@
     font-size: 4em;
     font-weight: 700;
     line-height: 1em;
-    text-transform: uppercase;
+    color: #fff;
+}
+
+.text h3 {
+    color: white;
+    -webkit-text-stroke: 1px black;
+    text-stroke: 1px black;
+  }
+
+h3 {
+    text-shadow: 0 0 5px #fff, 0 0 15px #fff, 
+    0 0 30px #fff, 0 0 20px #dacd1a, 0 0 35px #cec001, 
+    0 0 40px #adab04, 0 0 50px #e6cf04, 0 0 75px #f5e50c;
 }
 
 .text p {
-    font-size: 1.1em;
+    font-size: 1em;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
     margin: 20px 0;
     font-weight: 400;
     max-width: 700px;

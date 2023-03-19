@@ -1,0 +1,14 @@
+function signInWithFacebook() {
+  const provider = new firebase.auth.FacebookAuthProvider();
+  firebase.auth().signInWithPopup(provider)
+    .then((result) => {
+      const user = result.user;
+      console.log(user);
+      alert("Logged in successfully!!");
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      console.log(errorCode, errorMessage);
+    });
+}
