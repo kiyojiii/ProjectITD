@@ -36,6 +36,12 @@ body{
     overflow: hidden;
 }
 
+.back {
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
 .container::before{
     content: "";
     position: absolute;
