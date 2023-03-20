@@ -1,211 +1,273 @@
 <!DOCTYPE html>
-<!-- Created By CodingLab - www.codinglabweb.com -->
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="UTF-8">
-    <!---<title> Responsive Login Form | CodingLab </title>--->
-    <!-- <link rel="stylesheet" href="formstyle.css"> -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-     <script src="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.js"></script>
-  </head>
-  <body>
-    <div class="container">
-        <div class="form signin">
-            <h2> Sign In </h2>
-            <div class="inputBox">
-                <input type="text" id="lgemail" name="lgemail" required="required">
-                <i class="fa-regular fa-user"></i>
-                <span>email address</span>
-            </div>
-            <div class="inputBox">
-                <input type="password" id="lgpassword" name="lgpassword" required="required">
-                <i class="fa-solid fa-key"></i>
-                <span>password</span>
-            </div>
-            <div class="inputBox">
-                <input type="submit" id="login" name="login" value="Login">
-            </div>
+<html lang="en">
 
-        <div class="option">or Connect With Social Media</div>
-        <div class="twitter">
-          <a href="#"><i class="fab fa-twitter"></i>Sign in With Twitter</a>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title> Forms </title>
+  <link rel="stylesheet" href="formstyle.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
+  <script src="https://kit.fontawesome.com/334c45a40c.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.css" />
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+
+  <!-- <script src="main.js"></script> -->
+
+  <script defer src="./bundle.js"></script>
+</head>
+
+<body>
+
+  <header class="header">
+    <nav class="navbar">
+      <a href="#"> Home </a>
+      <a href="#"> Home </a>
+      <a href="#"> Home </a>
+      <a href="#"> Home </a>
+    </nav>
+
+    <form action="#" class="search-bar">
+      <input type="text" placeholder="Search...">
+      <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></box-icon></button>
+    </form>
+
+  </header>
+  <!--   
+  <video src="bg2.mp4" muted loop autoplay> </video> -->
+
+  <div class="container">
+    <div class="content">
+      <h2 class="log"><i><box-icon type='logo' name='firebase'></box-icon></i>
+        LOGO </h2>
+
+      <div class="text-sci">
+        <h2> Welcome <br><span> To Our New Website </span></h2>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod voluptatum sit corrupti, veritatis cum, numquam
+          quisquam sequi modi odio nemo perspiciatis harum, nesciunt delectus alias earum et vero illo eius.</p>
+        
+        <div class="social-icons">
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-google"></i></a>
         </div>
-        <div class="facebook">
-          <a href="#"><i class="fab fa-facebook-f"></i>Sign in With Facebook</a>
-        </div>
+      
+      </div>
     </div>
+
+
+    <div class="logreg-box">
+      <div class="form-box login">
+        <div class="form">
+          <h2> Sign In</h2>
+        
+          <div class="input-box">
+              <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+              <input type="text" id="email" name="email">
+              <label for="email"> Email </label>
+          </div>
+
+          <div class="input-box">
+            <span class="icon"><i class="fa-solid fa-key"></i></span>
+            <input type="password" id="password" name="password" required>
+            <label> Password </label>
+          </div>
+
+          <div class="remember-forgot">
+            <label><input type="checkbox"> Remember me </label>
+            <a href="#"> Forgot Password? </a>
+          </div>
+
+          <button type="submit" id="login" name="login" class="btn">Sign In</button>
+
+          <div class="login-register">
+            <p>Don't have an account? <a href="#" class="register-link">Sign Up</a></p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
 
 <script type="module">
 
-        // Import the functions you need from the SDKs you need
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
-        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-analytics.js";
-        import { getAuth, 
-                createUserWithEmailAndPassword, 
-                signInWithEmailAndPassword, 
-                signOut, 
-                GoogleAuthProvider, 
-                signInWithRedirect, 
-                getRedirectResult,
-                signInWithPopup,
-                onAuthStateChanged  } 
-                from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
-        // TODO: Add SDKs for Firebase products that you want to use
-        // https://firebase.google.com/docs/web/setup#available-libraries
-        
-        // Your web app's Firebase configuration
-        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-        const firebaseConfig = {
-          apiKey: "AIzaSyAvbSa-cklDf2WVqj1dNPyTX5JH-0gZA2Q",
-          authDomain: "itdproject-12c91.firebaseapp.com",
-          projectId: "itdproject-12c91",
-          storageBucket: "itdproject-12c91.appspot.com",
-          messagingSenderId: "158737123945",
-          appId: "1:158737123945:web:69ef810d48d0467799b0f8",
-          measurementId: "G-0QSDWHSQZ8"
-        };
-        
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const analytics = getAnalytics(app);
-        const provider = new GoogleAuthProvider();
-        // const provider2 = new FacebookAuthProvider();
-        const auth = getAuth();
-        console.log(app)
-        
-        //Google Sign-In
-        google_btn.addEventListener('click', () => {
-          const provider = new GoogleAuthProvider();
-          signInWithRedirect(auth, provider);
-        });
-        
-        // After redirection, handle the result and redirect to index.html
-        getRedirectResult(auth)
-          .then((result) => {
-            const credential = GoogleAuthProvider.credentialFromResult(result);
-            const token = credential.accessToken;
-            const user = result.user;
-            console.log(user);
-            // Redirect to index.html after successful login
-            window.location.href = "portfolio.html";
-          })
-          .catch((error) => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            const email = error.email;
-            const credential = GoogleAuthProvider.credentialFromError(error);
-            console.log(errorMessage);
-          });
-        
-        
-        //Facebook Sign-In
-        facebook_btn.addEventListener('click', () => {
-          signInWithRedirect(auth, provider2);
-        
-          getRedirectResult(auth, provider2).then((result) => {
-            // This gives you a Facebook Access Token. You can use it to access the Facebook API.
-            const credential = FacebookAuthProvider.credentialFromResult(result);
-            const token = credential.accessToken;
-        
-            const user = result.user;
-            // IdP data available using getAdditionalUserInfo(result)
-            // ...
-          }).catch((error) => {
-            // Handle Errors here.
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            // The email of the user's account used.
-            const email = error.customData.email;
-            // AuthCredential type that was used.
-            const credential = FacebookAuthProvider.credentialFromError(error);
-            // ...
-          });
-        
-        });
-        //----- New Registration code start	  
-        document.getElementById("register").addEventListener("click", function() {
-            var email =  document.getElementById("suemailadd").value; 
-            var password =  document.getElementById("supassword").value;
-          
-          //For new registration
-          createUserWithEmailAndPassword(auth, email, password).then((userCredential) => {
-            // Signed in 
-            const user = userCredential.user;
-            console.log(user);
-            (Swal.fire({
-            icon: 'success',
-            title: 'Registered Successfully',
-            text: 'You Will Be Redirected Shortly Please Wait',
-            }));
-            setTimeout(function () {
-            window.location.href = "index.html"; //will redirect to your blog page (an ex: blog.html)
-            }, 5000); //will call the function after 5 secs.
-            // ...
-            })
-          .catch((error) => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            // ..
-            console.log(errorMessage);
-            (Swal.fire({
-            icon: 'error',
-            title: 'An Error Has Occured',
-            text: ''+error,
-            }));;
-            });		  		  
-        });
-        //----- End
-        
-        //----- Login code start	  
-        document.getElementById("login").addEventListener("click", function() {
-          var email =  document.getElementById("lgemail").value;
-          var password = document.getElementById("lgpassword").value;
-        
-          signInWithEmailAndPassword(auth, email, password).then((userCredential) => {
-            // Signed in 
-            const user = userCredential.user;
-            console.log(user);
-            (Swal.fire({
-            icon: 'success',
-            title: 'Logged In Successfully',
-            text: 'You Will Be Redirected Shortly',
-            }));
-            setTimeout(function () {
-            window.location.href = "portfolio.html"; //will redirect to your blog page (an ex: blog.html)
-            }, 3000); //will call the function after 3 secs.
-            // ...
-          })
-          .catch((error) => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            console.log(errorMessage);
-            (Swal.fire({
-            icon: 'error',
-            title: 'An Error Has Occured',
-            text: ''+error,
-            }));;
-          });		  		  
-        });
-        //----- End
-        
-        //----- Logout code start	  
-        document.getElementById("logout").addEventListener("click", function() {
-          signOut(auth).then(() => {
-            // Sign-out successful.
-            console.log('Sign-out successful.');
-            alert('Sign-out successful.');
-            document.getElementById('logout').style.display = 'none';
-          }).catch((error) => {
-            // An error happened.
-            console.log('An error happened.');
-          });		  		  
-        });
-        //----- End
-        
-</script>
-        
-  </body>
-</html>
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-analytics.js";
+    import {
+      getAuth,
+      createUserWithEmailAndPassword,
+      signInWithEmailAndPassword,
+      signOut,
+      GoogleAuthProvider,
+      signInWithRedirect,
+      getRedirectResult,
+      signInWithPopup,
+      onAuthStateChanged
+    }
+      from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
 
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyAvbSa-cklDf2WVqj1dNPyTX5JH-0gZA2Q",
+      authDomain: "itdproject-12c91.firebaseapp.com",
+      projectId: "itdproject-12c91",
+      storageBucket: "itdproject-12c91.appspot.com",
+      messagingSenderId: "158737123945",
+      appId: "1:158737123945:web:69ef810d48d0467799b0f8",
+      measurementId: "G-0QSDWHSQZ8"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    // const provider = new GoogleAuthProvider();
+    // const provider2 = new FacebookAuthProvider();
+    const auth = getAuth();
+    console.log(app)
+
+    // //Google Sign-In
+    // google_btn.addEventListener('click', () => {
+    //   const provider = new GoogleAuthProvider();
+    //   signInWithRedirect(auth, provider);
+    // });
+
+    // // After redirection, handle the result and redirect to index.html
+    // getRedirectResult(auth)
+    //   .then((result) => {
+    //     const credential = GoogleAuthProvider.credentialFromResult(result);
+    //     const token = credential.accessToken;
+    //     const user = result.user;
+    //     console.log(user);
+    //     // Redirect to index.html after successful login
+    //     window.location.href = "portfolio.html";
+    //   })
+    //   .catch((error) => {
+    //     const errorCode = error.code;
+    //     const errorMessage = error.message;
+    //     const email = error.email;
+    //     const credential = GoogleAuthProvider.credentialFromError(error);
+    //     console.log(errorMessage);
+    //   });
+
+
+    // //Facebook Sign-In
+    // facebook_btn.addEventListener('click', () => {
+    //   signInWithRedirect(auth, provider2);
+
+    //   getRedirectResult(auth, provider2).then((result) => {
+    //     // This gives you a Facebook Access Token. You can use it to access the Facebook API.
+    //     const credential = FacebookAuthProvider.credentialFromResult(result);
+    //     const token = credential.accessToken;
+
+    //     const user = result.user;
+    //     // IdP data available using getAdditionalUserInfo(result)
+    //     // ...
+    //   }).catch((error) => {
+    //     // Handle Errors here.
+    //     const errorCode = error.code;
+    //     const errorMessage = error.message;
+    //     // The email of the user's account used.
+    //     const email = error.customData.email;
+    //     // AuthCredential type that was used.
+    //     const credential = FacebookAuthProvider.credentialFromError(error);
+    //     // ...
+    //   });
+
+    // });
+
+    //----- New Registration code start	  
+    // document.getElementById("register").addEventListener("click", function () {
+    //   var email = document.getElementById("suemailadd").value;
+    //   var password = document.getElementById("supassword").value;
+
+    //   //For new registration
+    //   createUserWithEmailAndPassword(auth, email, password).then((userCredential) => {
+    //     // Signed in 
+    //     const user = userCredential.user;
+    //     console.log(user);
+    //     (Swal.fire({
+    //       icon: 'success',
+    //       title: 'Registered Successfully',
+    //       text: 'You Will Be Redirected Shortly Please Wait',
+    //     }));
+    //     setTimeout(function () {
+    //       window.location.href = "index.html"; //will redirect to your blog page (an ex: blog.html)
+    //     }, 5000); //will call the function after 5 secs.
+    //     // ...
+    //   })
+    //     .catch((error) => {
+    //       const errorCode = error.code;
+    //       const errorMessage = error.message;
+    //       // ..
+    //       console.log(errorMessage);
+    //       (Swal.fire({
+    //         icon: 'error',
+    //         title: 'An Error Has Occured',
+    //         text: '' + error,
+    //       }));;
+    //     });
+    // });
+    //----- End
+
+    //----- Login code start	  
+    document.getElementById("login").addEventListener("click", function () {
+      var email = document.getElementById("email").value;
+      var password = document.getElementById("password").value;
+
+      signInWithEmailAndPassword(auth, email, password).then((userCredential) => {
+        // Signed in 
+        const user = userCredential.user;
+        console.log(user);
+        (Swal.fire({
+          icon: 'success',
+          title: 'Logged In Successfully',
+          text: 'You Will Be Redirected Shortly',
+        }));
+        setTimeout(function () {
+          window.location.href = "portfolio.html"; //will redirect to your blog page (an ex: blog.html)
+        }, 3000); //will call the function after 3 secs.
+        // ...
+      })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          console.log(errorMessage);
+          (Swal.fire({
+            icon: 'error',
+            title: 'An Error Has Occured',
+            text: '' + error,
+          }));;
+        });
+    });
+    //----- End
+
+    //----- Logout code start	  
+    // document.getElementById("logout").addEventListener("click", function () {
+    //   signOut(auth).then(() => {
+    //     // Sign-out successful.
+    //     console.log('Sign-out successful.');
+    //     alert('Sign-out successful.');
+    //     document.getElementById('logout').style.display = 'none';
+    //   }).catch((error) => {
+    //     // An error happened.
+    //     console.log('An error happened.');
+    //   });
+    // });
+    //----- End
+
+</script>
+
+
+  <!-- <script src="script.js"></script> -->
+
+</body>
+
+</html>

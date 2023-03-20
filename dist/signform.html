@@ -14,9 +14,15 @@
 </head>
 
 <body>
+
+    <video autoplay muted loop id="myVideo">
+        <source src="formsbg.mp4" type="video/mp4">
+      </video>
+
     <div class="container">
         <div class="signin-signup">
-            <form action="" class="sign-in-form">
+        <div class="form">
+            <div class="sign-in-form">
                 <h2 class="title"> Sign In </h2>
                 <div class="input-field">
                     <i class="fas fa-envelope"></i>
@@ -26,7 +32,9 @@
                     <i class="fas fa-key"></i>
                     <input type="password" id="lgpassword" name="lgpassword" required="required" placeholder="Password">
                 </div>
+                <div class="rlbtn">
                 <input type="submit" id="login" name="login" value="Login" class="btn">
+                </div>
                 <p class="social-text"> Or Sign in with social platform</p>
                 <div class="social media">
                     <a href="#" class="social-icon">
@@ -49,9 +57,11 @@
                     </a>
                 </div>
                 <p class="account-text"> Don't Have An Account? <a href="#" id="sign-up-btn2"> Sign Up</a></p>
-            </form>
+            </div>
+        </div>
 
-            <form action="" class="sign-up-form">
+        <div class="form">
+            <div class="sign-up-form">
                 <h2 class="title"> Sign Up </h2>
                 <div class="input-field">
                     <i class="fa-regular fa-envelope"></i>
@@ -61,7 +71,9 @@
                     <i class="fa fa-key"></i>
                     <input type="password" id="supassword" name="supassword" required="required" placeholder="Password">
                 </div>
+                <div class="rlbtn">
                 <input type="submit" id="register" name="register" value="Sign Up" class="btn">
+                </div>
                 <p class="social-text"> Or Sign in with social platform</p>
                 <div class="social media">
                     <a href="#" class="social-icon">
@@ -69,7 +81,8 @@
                     </a>
                     <a href="#" class="social-icon">
                         <i class="fab fa-twitter"></i>
-                    </a href="#" class="social-icon">
+                    </a>
+                    <a href="#" class="social-icon">
                         <i class="fab fa-google"></i>
                     </a>
                     <a href="#" class="social-icon">
@@ -82,29 +95,27 @@
                         <i class="fab fa-yahoo"></i>
                     </a>
                 </div>
-                <p class="account-text"> Already Have An Account? <a href="#" id="sign-in-btn2"> Sign In</a></p>
-            </form>
+                <p class="account-text"> Already Have An Account? <a href="#" id="sign-in-btn"> Sign Up</a></p>
+            </div>
         </div>
+        </div>
+        
         <div class="panels-container">
             <div class="panel left-panel">
                 <div class="content">
-                    <h3> Member of Brand? </h3>
-                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus est corrupti eaque odit ipsam
-                        officia natus deserunt dolor non iusto, nostrum nisi praesentium quaerat temporibus reiciendis,
-                        molestiae neque necessitatibus ad.</p>
+                    <h3> Already Registed To My Website? </h3>
+                    <p> Already have an account?, To access my website, you'll need to login using an existing account. Please click on the "Sign In" button on the bottom and enter your credentials to access your account.</p>
                     <button class="btn" id="sign-in-btn"> Sign In </button>
                 </div>
-                <img src="liyue.jpg" alt="#" class="image">
+                <img src="regbg.jpg" alt="#" class="image">
             </div>
             <div class="panel right-panel">
                 <div class="content">
-                    <h3> New To Brand? </h3>
-                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus est corrupti eaque odit ipsam
-                        officia natus deserunt dolor non iusto, nostrum nisi praesentium quaerat temporibus reiciendis,
-                        molestiae neque necessitatibus ad.</p>
+                    <h3> New To My Website? </h3>
+                    <p> Don't have an account yet?, To access my website, you'll need to register for an account. Creating an account is quick and easy - just click on the "Sign Up" button on the bottom and fill out the form with your email address, and a secure password.</p>
                     <button class="btn" id="sign-up-btn"> Sign Up </button>
                 </div>
-                <img src="inazuma.jpg" alt="#" class="image">
+                <img src="logbg.jpg" alt="#" class="image">
             </div>
         </div>
     </div>
@@ -223,11 +234,11 @@
         (Swal.fire({
         icon: 'success',
         title: 'Registered Successfully',
-        text: 'You Will Be Redirected Shortly Please Wait',
+        text: 'You Can Now Login, Redirecting...',
         }));
         setTimeout(function () {
         window.location.href = "index.html"; //will redirect to your blog page (an ex: blog.html)
-        }, 5000); //will call the function after 5 secs.
+        }, 2000); //will call the function after 5 secs.
         // ...
         })
       .catch((error) => {
@@ -259,7 +270,7 @@
         text: 'You Will Be Redirected Shortly',
         }));
         setTimeout(function () {
-        window.location.href = "portfolio.html"; //will redirect to your blog page (an ex: blog.html)
+        window.location.href = "start.html"; //will redirect to your blog page (an ex: blog.html)
         }, 3000); //will call the function after 3 secs.
         // ...
       })
