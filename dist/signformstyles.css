@@ -36,11 +36,10 @@ body{
     overflow: hidden;
 }
 
-.back {
-    cursor: pointer;
-    margin-top: 10px;
-    margin-left: 10px;
-}
+.back .btn {
+    height: 30px;
+    width: 80px;
+  }  
 
 .container::before{
     content: "";

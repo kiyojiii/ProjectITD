@@ -1,0 +1,52 @@
+[debug] [2023-03-21T05:07:08.308Z] ----------------------------------------------------------------------
+[debug] [2023-03-21T05:07:08.312Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-03-21T05:07:08.313Z] CLI Version:   11.24.0
+[debug] [2023-03-21T05:07:08.314Z] Platform:      win32
+[debug] [2023-03-21T05:07:08.314Z] Node Version:  v18.14.2
+[debug] [2023-03-21T05:07:08.318Z] Time:          Tue Mar 21 2023 13:07:08 GMT+0800 (Philippine Standard Time)
+[debug] [2023-03-21T05:07:08.318Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-03-21T05:07:08.325Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2023-03-21T05:07:08.532Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-03-21T05:07:08.533Z] > authorizing via signed-in user (acidicblitzz18@gmail.com)
+[debug] [2023-03-21T05:07:08.534Z] [iam] checking project itdproject-12c91 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-03-21T05:07:08.536Z] > refreshing access token with scopes: []
+[debug] [2023-03-21T05:07:08.538Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-03-21T05:07:08.538Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-03-21T05:07:18.522Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2023-03-21T05:07:18.523Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-03-21T05:07:18.544Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/itdproject-12c91:testIamPermissions [none]
+[debug] [2023-03-21T05:07:18.546Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/itdproject-12c91:testIamPermissions x-goog-quota-user=projects/itdproject-12c91
+[debug] [2023-03-21T05:07:18.546Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/itdproject-12c91:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-03-21T05:08:17.195Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/itdproject-12c91:testIamPermissions 200
+[debug] [2023-03-21T05:08:17.197Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/itdproject-12c91:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-03-21T05:08:17.211Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/itdproject-12c91 [none]
+[debug] [2023-03-21T05:08:47.217Z] Timeout reached making request to https://firebase.googleapis.com/v1beta1/projects/itdproject-12c91
+[debug] [2023-03-21T05:08:47.224Z] FirebaseError: Timeout reached making request to https://firebase.googleapis.com/v1beta1/projects/itdproject-12c91
+    at RetryOperation._fn (C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:238:35)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to get Firebase project itdproject-12c91. Please make sure the project exists and your account has permission to access it.
+[debug] [2023-03-21T05:10:08.656Z] ----------------------------------------------------------------------
+[debug] [2023-03-21T05:10:08.661Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-03-21T05:10:08.662Z] CLI Version:   11.24.0
+[debug] [2023-03-21T05:10:08.662Z] Platform:      win32
+[debug] [2023-03-21T05:10:08.662Z] Node Version:  v18.14.2
+[debug] [2023-03-21T05:10:08.665Z] Time:          Tue Mar 21 2023 13:10:08 GMT+0800 (Philippine Standard Time)
+[debug] [2023-03-21T05:10:08.666Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-03-21T05:10:08.672Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2023-03-21T05:10:08.878Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-03-21T05:10:08.879Z] > authorizing via signed-in user (acidicblitzz18@gmail.com)
+[debug] [2023-03-21T05:10:08.879Z] [iam] checking project itdproject-12c91 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-03-21T05:10:08.881Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/itdproject-12c91:testIamPermissions [none]
+[debug] [2023-03-21T05:10:08.881Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/itdproject-12c91:testIamPermissions x-goog-quota-user=projects/itdproject-12c91
+[debug] [2023-03-21T05:10:08.881Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/itdproject-12c91:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-03-21T05:10:35.599Z] [iam] error while checking permissions, command may fail: FirebaseError: Failed to make request to https://cloudresourcemanager.googleapis.com/v1/projects/itdproject-12c91:testIamPermissions
+[debug] [2023-03-21T05:10:35.606Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/itdproject-12c91 [none]
+[debug] [2023-03-21T05:10:47.076Z] Failed to make request to https://firebase.googleapis.com/v1beta1/projects/itdproject-12c91
+[debug] [2023-03-21T05:10:47.091Z] FirebaseError: Failed to make request to https://firebase.googleapis.com/v1beta1/projects/itdproject-12c91
+    at RetryOperation._fn (C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:242:31)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to get Firebase project itdproject-12c91. Please make sure the project exists and your account has permission to access it.
