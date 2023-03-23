@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE-edge">
+<meta name="viewport" content="width=device-width, intial-scale=1.0">
+<title> Introduction </title>
+<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+<script src="https://kit.fontawesome.com/334c45a40c.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<link rel="stylesheet" href="websitestyle.css">
+
+	
+</head>
+<body>
+    <div class="container">
+
+		<nav>
+            <a href="index.html"> <img src="g.png" class="logo"> </a>
+            <ul>
+				<li><a href="pportfolio.html#home"> Home </a></li>
+                <li><a href="pportfolio.html#about"> About </a></li>
+				<li><a href="pportfolio.html#services"> Websites </a></li>
+				<li><a href="pportfolio.html#portfolio"> Portfolio </a></li>
+                <li><a href="pportfolio.html#contact"> Contact </a></li>
+            </ul>
+            <!-- <img src="liyuev2.jpg" class="icon"> -->
+        </nav>
+    
+        <div class="text-box">
+            <p> Hello, </p>
+            <h1> Traveler </h1>
+            <h3> Come and Explore My Personal Website </h3>
+
+            <div class="row">
+                <a href="start.html"> Go back </a>
+                <a href="pportfolio.html"> Explore <span> &#x27F6</span></a>
+                <span> Welcome to my personal website, a showcase of my innovative and creative work. Click explore to know more about me and my website. </span>
+            </div>
+        </div>
+
+        <div class="social-icons">
+            <a href="https://twitter.com/Clinttoott" target="_blank" ><img src="ltwt.png"></a>
+            <a href="https://www.facebook.com/Kiyojiii" target="_blank" ><img src="lfb.png"></a>
+            <a href="https://www.linkedin.com/in/clint-joshua-velasquez-6b2976265/" target="_blank" ><img src="lln.png"></a>
+        </div>
+         
+    </div>
+	
+	<script type="module">
+
+		// Import the functions you need from the SDKs you need
+		import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
+		import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-analytics.js";
+		import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
+		// TODO: Add SDKs for Firebase products that you want to use
+		// https://firebase.google.com/docs/web/setup#available-libraries
+		
+		// Your web app's Firebase configuration
+		// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+		const firebaseConfig = {
+		  apiKey: "AIzaSyAvbSa-cklDf2WVqj1dNPyTX5JH-0gZA2Q",
+		  authDomain: "itdproject-12c91.firebaseapp.com",
+		  projectId: "itdproject-12c91",
+		  storageBucket: "itdproject-12c91.appspot.com",
+		  messagingSenderId: "158737123945",
+		  appId: "1:158737123945:web:69ef810d48d0467799b0f8",
+		  measurementId: "G-0QSDWHSQZ8"
+		};
+		
+		// Initialize Firebase
+		const app = initializeApp(firebaseConfig);
+		const analytics = getAnalytics(app);
+		const auth = getAuth();
+		console.log(app)
+
+		//----- Logout code start	  
+		document.getElementById("logout").addEventListener("click", function() {
+		  signOut(auth).then(() => {
+			// Sign-out successful.
+			console.log('Sign-out successful.');
+			(Swal.fire({
+			icon: 'success',
+			title: 'Logged Out Successfully',
+			}));
+			setTimeout(function () {
+			window.location.href = "index.html"; //will redirect to your blog page (an ex: blog.html)
+			}, 2000);
+		  }).catch((error) => {
+			// An error happened.
+			console.log('An error happened.');
+			(Swal.fire({
+			icon: 'error',
+			title: 'An Error Has Occured',
+			text: ''+error,
+			}));;
+			});
+		  });		  		  
+		//----- End
+		
+			</script>
+
+</body>
+</html>

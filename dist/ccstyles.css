@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+	list-style: none;
+	text-decoration: none;
+	font-family: 'Yellowtail', cursive;
+}
+
+h1.title{
+	margin-bottom: 20px;
+	color: #000000;
+	font-family: 'Mitr', sans-serif;
+	text-transform: uppercase;
+	font-size: 38px;
+	word-spacing: 25px;
+	letter-spacing: 5px;
+}
+
+p{
+	margin-bottom: 15px;
+	font-size: 18px;
+	line-height: 20px;
+	color: black;
+	word-spacing: 2px;
+}
+
+.main_container{
+	position: relative;
+}
+
+/* Navigation Bar */
+.navbar{
+	width: 100%;
+	height: 65px;
+	position: fixed;
+	display: inline-flex;
+	justify-content: space-around;
+	align-items: right;
+}
+
+.logo a{
+	font-family: 'Permanent Marker', cursive;
+	font-size: 32px;
+	color: #fb2274;
+	position: left;
+}
+
+.navbar_items ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+}
+
+.navbar_items ul li{
+	float: left;
+}
+
+.navbar_items ul li a{
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar_items li a:hover {
+  background-color: silver;
+}
+
+/* banner_image */
+.banner_image{
+	background: url('images/p1.jpg') repeat top center;
+	background-size: cover;
+	width: 100%;
+	height: 800px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.banner_content{
+	text-align: center;
+	color: #fff;
+}
+
+.banner_content h1{
+	text-transform: uppercase;
+	line-height: 38px;
+	margin-bottom: 15px;
+	font-size: 28px;
+	word-spacing: 5px;
+	line-height: 60px;
+}
+
+/* Ad/Ga/Ab/Co Template */
+.Advocacy,
+.Gallery,
+.About,
+.ContactUs{
+	text-align: center;
+	padding: 5% 10%;
+}
+
+/* Advocacy */
+.Advocacy{
+	background: url('images/p3.jpg');
+	background-size: cover;
+	width: 100%;
+	height: 700px;
+}
+
+.btn {
+ display: inline-block;
+ padding: 15px 25px;
+ font-size: 24px;
+ cursor: pointer;
+ text-align: center;
+ text-decoration: none;
+ outline: none;
+ background-color: #FFF;
+ border: none;
+ border-radius: 15px;
+ box-shadow: 0 9px silver;
+ background-color: white; 
+ border: 3px solid black;
+ align-self: center;
+}
+
+.btn:hover {
+  background-color: silver;
+}
+
+.btn:active{
+	background-color: silver;
+	box-shadow: 0 15px silver;
+	transform: translateY(4px);
+}
+
+/* Gallery */
+
+.responsive{
+	display: flex;
+	flex-direction: column;
+}
+
+.responsive{
+	display: inline-flex;
+	justify-content: space-between;
+}
+
+.responsive{
+	margin-bottom: 25px;
+}
+
+.responsive{
+	width: 30%;
+	height: auto;
+	cursor: pointer;
+	overflow: hidden;
+	position: relative;
+}
+
+.responsive img{
+	display: block;
+	width: 100%;
+	height: auto;
+	transition: all 0.5s ease;
+}
+
+.responsive:hover img{
+	transform: scale(1.1);
+}
+
+/* About */
+.About{
+	background: #a9a9a9;
+}
+
+.diff_auth_own{
+	display: inline-flex;
+	flex-direction: column;
+	margin-top: 15px;
+    justify-content: space-between;
+}
+
+.diff_auth_own{
+	width: 30%;
+	height: auto;
+	cursor: pointer;
+	overflow: hidden;
+	position: relative;
+	line-height: 35px;
+}
+
+.diff_auth_own img{
+	display: inline-block;
+	width: 100%;
+	height: auto;
+	transition: all 0.5s ease;
+	border: solid;
+}
+
+.diff_auth_own:hover img{
+	transform: scale(1.1);
+}
+
+.sp{
+	text-align: center;
+	padding: 0% 0%;
+	font-size: 18px;
+	border-style: solid;
+	justify-content: space-between;
+}
+
+/* Contact us */
+.ContactUs
+* {
+  box-sizing: border-box;
+}
+
+/* Style inputs */
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Style the container/contact section */
+.cuf{
+	font-size: 100px;
+}
+
+.ContactUs {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+/* Create two columns that float next to eachother */
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+/* submit */
+.submit_image{
+	background: url('images/p10.jpg') repeat top center;
+	background-size: cover;
+	width: 100%;
+	height: 700px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.submit_content{
+	text-align: center;
+	color:black;
+}
+
+.submit_content h1{
+	text-transform: uppercase;
+	line-height: 38px;
+	margin-bottom: 15px;
+	font-size: 28px;
+	word-spacing: 5px;
+	line-height: 60px;
+}
+
+/* links */
+.btn2{
+	display: inline-block;
+	text-align: left;
+	font-size: 25px;
+	word-spacing: 25px;
+}
+
+/* email */
+.email2{
+	display: block;
+	text-align: center;
+	font-size: 25px;
+	color: black;
+}
+
+.email2_image{
+	background: url('images/p11.jpg') repeat top center;
+	background-size: cover;
+	width: 100%;
+	height: 850px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.email2_content{
+	text-align: center;
+	color:black;
+}
+
+.email2_content h1{
+	text-transform: uppercase;
+	line-height: 38px;
+	margin-bottom: 15px;
+	font-size: 28px;
+	word-spacing: 5px;
+	line-height: 60px;
+} 
+
+/* footer */
+.footer{
+	width: 100%;
+	text-align: center;
+	background: #444444;
+	padding: 20px 0;
+}
+
+.footer a{
+	color: #fff;
+}
+
+
+
+@media (max-width: 720px){
+
+	.navbar{
+		height: auto;
+		flex-direction: column;
+	}
+
+	.logo{
+		margin-bottom: 25px;
+	}
+
+	.navbar_items ul{
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.navbar_items ul li{
+		margin-bottom:5px;
+	}
+
+	.banner_content{
+		margin-top: 35px;
+	}
+
+}

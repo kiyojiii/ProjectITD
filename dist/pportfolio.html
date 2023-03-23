@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <title> Personal Webpage </title>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/334c45a40c.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="pportfolio.css">
+
+    <!-- swiper css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+
+</head>
+
+<body>
+
+    <!-- header and navbar -->
+
+    <header class="header">
+        <a href="#" class="logo"> CJV </a>
+
+        <nav class="navbar">
+            <a href="#home" class="active"> Home </a>
+            <a href="#about"> About </a>
+            <a href="#services"> Websites</a>
+            <a href="#portfolio"> Portfolio </a>
+            <a href="#contact"> Contact </a>
+        </nav>
+
+        <div class="bx bx-moon" id="darkMode-icon"> </div>
+        <div class="bx bx-menu" id="menu-icon"> </div>
+
+    </header>
+
+    <!-- home section design -->
+
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3> Hello, I am </h3>
+            <h1> Clint Joshua </h1>
+            <p> Welcome to my portfolio website, a showcase of my innovative and creative work. From stunning visuals to
+                cutting-edge concepts, discover the unique perspective and skillset I bring to the table. Have fun exploring my personal website!
+            <div class="social-media">
+                <a href="https://www.facebook.com/Kiyojiii" target="_blank"><i class="bx bxl-facebook"></i> </a>
+                <a href="https://twitter.com/home" target="_blank"><i class="bx bxl-twitter"></i> </a>
+                <a href="https://www.linkedin.com/in/clint-joshua-velasquez-6b2976265/" target="_blank"><i class="bx bxl-linkedin"></i> </a>
+                <a href="https://www.instagram.com/clinttooott/" target="_blank"><i class="bx bxl-instagram"></i> </a>
+            </div>
+
+            <a href="#" class="btn"> Download CV </a>
+        </div>
+
+        <div class="profession-container">
+            <div class="profession-box">
+
+                <div class="profession" style="--i:0;">
+                    <i class='bx bxs-graduation'></i>
+                    <h3> College Student </h3>
+                </div>
+
+                <div class="profession" style="--i:1;">
+                    <i class='bx bx-laptop'></i>
+                    <h3> 3rd Year BS-IT </h3>
+                </div>
+
+                <div class="profession" style="--i:2;">
+                    <i class='bx bx-code-alt'></i>
+                    <h3> Web Developer </h3>
+                </div>
+
+                <div class="profession" style="--i:3;">
+                    <i class='bx bxl-graphql'></i>
+                    <h3> Genshin Player </h3>
+                </div>
+
+                <div class="circle">
+
+                </div>
+            </div>
+
+            <div class="overlay">
+
+            </div>
+
+            <div class="home-img">
+                <img src="homenobg.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-- about section design -->
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="aboutbg2.png" alt="">
+        </div>
+
+        <div class="about-content">
+            <h2 class="heading"> About <span> Me </span></h2>
+            <h3> My Name is Clint Joshua O. Velasquez </h3>
+            <p> A 3rd Year BS - Information Technology in MSU - IIT. Technology has always fascinated me, and I have a strong desire to learn and innovate in this field. I am highly motivated and detail-oriented, which has helped me excel in my coursework so far. I am always on the lookout for new technologies and trends in the industry and am eager to apply my knowledge to real-world problems. Overall, I am passionate about technology and am excited about the opportunities that lie ahead in my career. </p>
+            <a href="https://www.facebook.com/Kiyojiii" target="_blank" class="btn"> Read More </a>
+        </div>
+    </section>
+
+    <!-- services section design -->
+    <section class="services" id="services">
+        <h2 class="heading"> My <span> Websites </span></h2>
+
+        <div class="services-container">
+            <div class="services-box">
+                <i class='bx bx-file'></i>
+                <h3> First Portfolio </h3>
+                <p> Welcome to my portfolio showcasing my work and skills for Web Developing. Browse my writing, spanning various topics and styles, and learn about my training, capabilities, and expertise. Whether you're a potential client or simply curious, I hope you find this informative and engaging. Thanks for visiting! </p>
+                <a href="portfolio.html" target="_blank" class="btn"> Go To Portfolio</a>
+            </div>
+            <div class="services-box">
+                <i class='bx bx-desktop'></i>
+                <h3> First Website </h3>
+                <p> I created this website as our final project on our first year subject about web development, It is not the best website, but I am still a beginner during this time, it talks about the advocacy of Climate Change. How and What we can do to prevent the changing of our world. This website is not the best out there, but it makes me proud. </p>
+                <a href="website2.html" target="_blank" class="btn"> Go To Website </a>
+            </div>
+            <div class="services-box">
+                <i class='bx bxs-spreadsheet'></i>
+                <h3> First Website Prototype </h3>
+                <p> This is our first prototype website, to comply for our final project on requirements engineering we made this website, Me, Sam, Chu and Rex made a proposal about a website that resembles an SMB Marketplace. It is not a fully functional website, but some buttons work and are connected to different pages. </p>
+                <a href="https://www.figma.com/proto/qc97cbwbfdPxOcXeWax82T/Final-Prototype-Output?node-id=1-232&scaling=contain&page-id=0%3A1&starting-point-node-id=1%3A1084" target="_blank" class="btn"> Go To Website </a>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- portfolio section design -->
+    <section class="portfolio" id="portfolio">
+        <h2 class="heading"> My <span> Hobbies </span></h2>
+
+        <div class="portfolio-container">
+            <div class="portfolio-box">
+                <!-- <img src="img/programming.jpg" alt=""> -->
+                <video src="bg2.mp4" muted loop autoplay> </video>
+
+                <div class="portfolio-layer">
+                    <h4> Playing Genshin Impact </h4>
+                    <p> Playing Genshin Impact as a hobby offers an immersive open world filled with adventure, character discovery, and strategic combat, with frequent updates and events to keep players engaged. </p>
+                    <a href="https://genshin.hoyoverse.com/en/home" target="_blank"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <img src="img/coding.gif" alt="">
+
+                <div class="portfolio-layer">
+                    <h4> Programming </h4>
+                    <p> Coding as a hobby is a fun and accessible way to exercise problem-solving skills and unleash creativity by exploring computer programming. </p>
+                    <a href="https://en.wikipedia.org/wiki/Computer_programming" target="_blank"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <img src="img/wanime.gif" alt="">
+
+                <div class="portfolio-layer">
+                    <h4> Watching Anime </h4>
+                    <p> Watching anime as a hobby offers a fun and diverse way to enjoy captivating storylines, stunning animation, and different cultures. With new releases constantly coming out, it's a great way to relax and escape into fantastical worlds.</p>
+                    <a href="https://en.wikipedia.org/wiki/Anime" target="_blank"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <img src="img/biking.gif" alt="">
+
+                <div class="portfolio-layer">
+                    <h4> Biking </h4>
+                    <p> Biking as a hobby is a healthy, exhilarating way to explore and enjoy the freedom of the open road while connecting with nature, challenging yourself physically, and clearing your mind. </p>
+                    <a href="https://en.wikipedia.org/wiki/Cycling" target="_blank"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <img src="img/driving.gif" alt="">
+
+                <div class="portfolio-layer">
+                    <h4> Driving </h4>
+                    <p> Driving as a hobby is a thrilling way to explore the open road, connect with other enthusiasts, and experience the freedom of mobility. </p>
+                    <a href="https://en.wikipedia.org/wiki/Driving" target="_blank"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <img src="img/reading.gif" alt="">
+
+                <div class="portfolio-layer">
+                    <h4> Reading </h4>
+                    <p> Reading as a hobby is a relaxing and enjoyable way to escape into different worlds and explore new ideas. It allows you to expand your knowledge, sharpen your mind, and improve your vocabulary while experiencing the joy of storytelling. </p>
+                    <a href="https://en.wikipedia.org/wiki/Reading" target="_blank"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- testimonial design -->
+    <div class="testimonial-container">
+        <h2 class="heading"> Genshin <span> Mains </span></h2>
+        
+        <div class="testimonial-wrapper">
+            <div class="testimonial-box mySwiper">
+                <div class="testimonial-content swiper-wrapper">
+                    <div class="testimonial-slide swiper-slide">
+                        <img src="img/hutao.png" alt="">
+                        <a href="https://genshin-impact.fandom.com/wiki/Hu_Tao" target="_blank"><h3> Hu Tao </h3></a>
+                        <p> Hu Tao is a popular character in the action role-playing game Genshin Impact. As a five-star Pyro user, she wields a polearm in combat and possesses unique abilities that allow her to drain her own health to deal massive damage to enemies. Hu Tao is often described as cheerful and mischievous, with a fondness for ghost stories and mischief. Her dynamic personality and impressive combat skills have made her a beloved character among fans of the game. </p>
+                    </div>
+                    <div class="testimonial-slide swiper-slide">
+                        <img src="img/keqing.png" alt="">
+                        <a href="https://genshin-impact.fandom.com/wiki/Keqing" target="_blank"> <h3> Keqing </h3> </a>
+                        <p> Keqing is a highly skilled and formidable character in the action role-playing game Genshin Impact. As the Yuheng of the Liyue Qixing, she possesses powerful Electro abilities and wields a sword in combat. Keqing is known for her confident and independent personality, as well as her intelligence and strategic thinking. Her impressive skills and dynamic personality have made her a fan favorite among players, and she is often considered one of the strongest characters in the game. </p>
+                    </div>
+                    <div class="testimonial-slide swiper-slide">
+                        <img src="img/ganyu.png" alt="">
+                        <a href="https://genshin-impact.fandom.com/wiki/Ganyu" target="_blank"><h3> Ganyu </h3> </a>
+                        <p> Ganyu is a popular character in the action role-playing game Genshin Impact. As a half-human, half-Adeptus creature, she possesses powerful Cryo abilities and wields a bow in combat. Ganyu is often described as kind, diligent, and knowledgeable, and has a passion for astronomy and traditional poetry. Her reserved and gentle demeanor has made her a beloved character among fans, and her unique abilities make her a valuable asset in any player's party. </p>
+                    </div>
+                </div>
+
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- contact section design -->
+    <section class="contact" id="contact">
+        <h2 class="heading"> Contact <span> Me </span></h2>
+
+        <form action="#">
+            <div class="input-box">
+                <input type="text" placeholder="Full Name">
+                <input type="email" placeholder = "Email Address">
+            </div>
+            <div class="input-box">
+                <input type="number" placeholder="Mobile Number">
+                <input type="text" placeholder = "Email Subject">
+            </div>
+            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+            <input type="submit" value="Send a Message" class="btn">
+        </form>
+
+    </section>
+
+    <!-- footer design -->
+    <footer class="footer">
+        <div class="footer-text">
+            <p> Copyright &copy; 2023 by CJV | All Rights Reserved </p>
+        </div>
+
+        <div class="footer-iconTop">
+            <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+        </div>
+    </footer>
+
+<!--------------------------------------------JS------------------------------------------------>
+
+    <!-- scroll reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- swiper js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <!-- script js -->
+    <script src="script.js"></script>
+
+    <!-- firebase js -->
+    <script type="module">
+
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-analytics.js";
+        import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyAvbSa-cklDf2WVqj1dNPyTX5JH-0gZA2Q",
+            authDomain: "itdproject-12c91.firebaseapp.com",
+            projectId: "itdproject-12c91",
+            storageBucket: "itdproject-12c91.appspot.com",
+            messagingSenderId: "158737123945",
+            appId: "1:158737123945:web:69ef810d48d0467799b0f8",
+            measurementId: "G-0QSDWHSQZ8"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        const auth = getAuth();
+        console.log(app)
+
+        //----- Logout code start	  
+        document.getElementById("logout").addEventListener("click", function () {
+            signOut(auth).then(() => {
+                // Sign-out successful.
+                console.log('Sign-out successful.');
+                (Swal.fire({
+                    icon: 'success',
+                    title: 'Logged Out Successfully',
+                }));
+                setTimeout(function () {
+                    window.location.href = "index.html"; //will redirect to your blog page (an ex: blog.html)
+                }, 2000);
+            }).catch((error) => {
+                // An error happened.
+                console.log('An error happened.');
+                (Swal.fire({
+                    icon: 'error',
+                    title: 'An Error Has Occured',
+                    text: '' + error,
+                }));;
+            });
+        });
+		//----- End
+
+    </script>
+
+</body>
+
+</html>
