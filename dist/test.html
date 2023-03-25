@@ -5,183 +5,319 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title> Sign-in & Sign-up </title>
+  <title> Test </title>
   <!-- <link rel="stylesheet" href="signformstyles.css"> -->
   <script src="https://kit.fontawesome.com/334c45a40c.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="test.css">
 
-
-  <script defer src="./bundle.js"></script>
 </head>
 
 <body>
-  <!--         
-        <div class="navbar navbar-default">
-            <div class="navbar-header">
-              <a class="navbar-brand" href="https://www.shinerweb.com">PBB Sample</a>
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false" aria-controls="navbar">
-                  <span class="sr-only">Toggle navigation</span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-              </button>
-            </div>
-            <div class="navbar-collapse collapse"  >
-                <ul class="nav navbar-nav navbar-right">
-                     <li><a href="#" id="logout" style="display: none;">Log Out</a></li>
-                </ul>
-            </div>
-            </div>
-            <br> -->
-  <div class="container">
-    <div class="signin-signup"></div>
-    <!-- <form name="registration_form" id="registration_form" method="post" action="#" enctype="multipart/form-data"> -->
-      <h2 class="title"> Sign Up </h2>
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input type="text" name="login_email" id="login_email" class="form-control" placeholder="Enter your email">
-      </div>
-      <div class="input-field">
-        <i class="fa fa-key"></i>
-        <input type="password" id="supassword" name="supassword" required="required" placeholder="Password">
-    </div>
-    <input type="submit" id="register" name="register" value="Sign Up" class="btn">
-    <p class="social-text"> Or Sign in with social platform</p>
-    <div class="social media">
-        <a href="#" class="social-icon">
-            <i class="fab fa-facebook"></i>
-        </a>
-        <a href="#" class="social-icon">
-            <i class="fab fa-twitter"></i>
-        </a>
-        <a href="#" class="social-icon">
-            <i class="fab fa-google"></i>
-        </a>
-        <a href="#" class="social-icon">
-            <i class="fab fa-github"></i>
-        </a>
-        <a href="#" class="social-icon">
-            <i class="fab fa-microsoft"></i>
-        </a>
-        <a href="#" class="social-icon">
-            <i class="fab fa-yahoo"></i>
-        </a>
-    </div>
-    <p class="account-text"> Already Have An Account? <a href="#" id="sign-in-btn2"> Sign In</a></p>
+  <h1> ASDASDASD </h1>
+  <label> FIRSTNAME </label>
+  <input type="text" placeholder="FirstName" name="FirstName" id="FirstName">
+  <label> LASTNAME </label>
+  <input type="text" placeholder="LastName" name="LastName" id="LastName">
+  <label> FavChar </label>
+  <input type="text" placeholder="FavChar" name="FavChar" id="FavChar">
 
+  <button type="button" id="saveBtn"> Save </button>
+  <button type="button" id="getDataBtn"> Get - Data </button>
+  <button type="button" id="changeBtn"> Update </button>
+  <button type="button" id="deleteBtn"> Delete </button>
 
-    </div>
-    <form name="login_form" id="login_form" method="post" action="#" enctype="multipart/form-data">
-      <div class="col-sm-4">
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="text" name="login_email" id="login_email" class="form-control" placeholder="Enter your email">
+  <div>
+    <table>
+      <thead>
+
+      </thead>
+      <tbody id="myTable">
+
+        <div id="edit-modal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Edit User</h2>
+            <label for="Fname-input">Name:</label>
+            <input id="Fname-input" type="text">
+            <label for="Lname-input">Email:</label>
+            <input id="Lname-input" type="text">
+            <label for="Favchar-input">FavourateCharacter:</label>
+            <input id="Favchar-input" type="text">
+            <button id="update-button">Update</button>
+            <button id="cancel-button">Cancel</button>
+          </div>
         </div>
-
-        <div class="form-group">
-          <label for="password">Password</label>
-          <input type="password" name="login_password" id="login_password" class="form-control"
-            placeholder="Enter your password">
-        </div>
-        <button type="button" id="login" name="login" class="btn btn-success">Login</button>
-      </div><!-- end col -->
-
-  </div><!--  end row -->
-  </form>
+        
+      </tbody>
+    </table>
   </div>
-  <br>
 
 </body>
 
-</html>
-
+<!-- <script src="server.js"></script> -->
 <script type="module">
 
   // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-analytics.js";
-  import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js';
+import { getAnalytics } from 'https://www.gstatic.com/firebasejs/9.10.0/firebase-analytics.js';
+import { getAuth, 
+      createUserWithEmailAndPassword, 
+      signInWithEmailAndPassword, 
+      signOut, 
+      GoogleAuthProvider, 
+      signInWithRedirect, 
+      getRedirectResult,
+      signInWithPopup,
+      onAuthStateChanged,} 
+      from 'https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js';
+import { getFirestore,
+      collection,
+      addDoc,
+      connectFirestoreEmulator,
+      query, 
+      getDocs,
+      updateDoc,
+      setDoc,
+      doc,
+      onSnapshot,
+      deleteDoc } from 'https://www.gstatic.com/firebasejs/9.10.0/firebase-firestore.js';
 
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  const firebaseConfig = {
-    apiKey: "AIzaSyAvbSa-cklDf2WVqj1dNPyTX5JH-0gZA2Q",
-    authDomain: "itdproject-12c91.firebaseapp.com",
-    projectId: "itdproject-12c91",
-    storageBucket: "itdproject-12c91.appspot.com",
-    messagingSenderId: "158737123945",
-    appId: "1:158737123945:web:69ef810d48d0467799b0f8",
-    measurementId: "G-0QSDWHSQZ8"
-  };
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-  const auth = getAuth();
-  console.log(app);
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+apiKey: "AIzaSyAvbSa-cklDf2WVqj1dNPyTX5JH-0gZA2Q",
+authDomain: "itdproject-12c91.firebaseapp.com",
+projectId: "itdproject-12c91",
+storageBucket: "itdproject-12c91.appspot.com",
+messagingSenderId: "158737123945",
+appId: "1:158737123945:web:69ef810d48d0467799b0f8",
+measurementId: "G-0QSDWHSQZ8"
+};
 
-  //----- New Registration code start	  
-  document.getElementById("register").addEventListener("click", function () {
-    var email = document.getElementById("email").value;
-    var password = document.getElementById("password").value;
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+const provider = new GoogleAuthProvider();
+// const provider2 = new FacebookAuthProvider();
+// const auth = getAuth();
+console.log(app)
 
-    //For new registration
-    createUserWithEmailAndPassword(auth, email, password).then((userCredential) => {
-      // Signed in 
-      const user = userCredential.user;
-      console.log(user);
-      alert("Registration successfully!!");
-      // ...
-    })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        // ..
-        console.log(errorMessage);
-        alert(error);
+//Firestore
+const db = getFirestore(app);
+
+
+// Get the table element from the DOM
+const table = document.getElementById("myTable");
+
+// Get the modal element from the DOM
+const modal = document.getElementById("edit-modal");
+
+// Get the close button element
+const closeBtn = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the close button, hide the modal
+closeBtn.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, hide it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+
+// Create a header row
+const headerRow = table.insertRow();
+headerRow.insertCell().textContent = "FirstName";
+headerRow.insertCell().textContent = "LastName";
+headerRow.insertCell().textContent = "FavourateCharacters";
+headerRow.insertCell().textContent = "Actions";
+
+// Create a query for the users collection
+const usersRef = collection(db, "FavourateCharacters");
+
+// Listen for new data in real-time
+onSnapshot(usersRef, (querySnapshot) => {
+  // Clear existing data from the table
+  while (table.rows.length > 1) {
+    table.deleteRow(1);
+  }
+
+  // Add new data to the table
+  querySnapshot.forEach((doc) => {
+    const row = table.insertRow();
+    row.insertCell().textContent = doc.data().FirstName;
+    row.insertCell().textContent = doc.data().LastName;
+    row.insertCell().textContent = doc.data().FavChar;
+
+    // Create an "Edit" button for each row
+    const editCell = row.insertCell();
+    const editButton = document.createElement("button");
+    editButton.textContent = "Edit";
+    editButton.addEventListener("click", () => {
+      // Set the input fields in the modal to the current values
+      const FnameInput = modal.querySelector("#Fname-input");
+      const LnameInput = modal.querySelector("#Lname-input");
+      const FavcharInput = modal.querySelector("#Favchar-input");
+      FnameInput.value = doc.data().FirstName;
+      LnameInput.value = doc.data().LastName;
+      FavcharInput.value = doc.data().FavChar;
+
+      // Show the modal
+      modal.style.display = "block";
+
+      // Call a function to update the document in Firestore
+      const updateButton = modal.querySelector("#update-button");
+      updateButton.addEventListener("click", () => {
+        updateDocument(doc.id, FnameInput.value, LnameInput.value, FavcharInput.value);
+        modal.style.display = "none";
       });
-  });
-  //----- End
 
-  //----- Login code start	  
-  document.getElementById("login").addEventListener("click", function () {
-    var email = document.getElementById("login_email").value;
-    var password = document.getElementById("login_password").value;
-
-    signInWithEmailAndPassword(auth, email, password).then((userCredential) => {
-      // Signed in 
-      const user = userCredential.user;
-      console.log(user);
-      alert(user.email + " Login successfully!!!");
-      document.getElementById('logout').style.display = 'block';
-      // ...
-    })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        console.log(errorMessage);
-        alert(errorMessage);
+      // Close the modal when the "Cancel" button is clicked
+      const cancelButton = modal.querySelector("#cancel-button");
+      cancelButton.addEventListener("click", () => {
+        modal.style.display = "none";
       });
-  });
-  //----- End
-
-  //----- Logout code start	  
-  document.getElementById("logout").addEventListener("click", function () {
-    signOut(auth).then(() => {
-      // Sign-out successful.
-      console.log('Sign-out successful.');
-      alert('Sign-out successful.');
-      document.getElementById('logout').style.display = 'none';
-    }).catch((error) => {
-      // An error happened.
-      console.log('An error happened.');
     });
+    editCell.appendChild(editButton);
   });
-//----- End
+}, (error) => {
+  console.log("Error getting documents: ", error);
+});
+
+// Function to update a document in Firestore
+function updateDocument(docId, FirstName, LastName, FavChar) {
+  if (FavChar === undefined) {
+    console.error("Error: FavChar value is undefined.");
+    return;
+  }
+  const userRef = doc(db, "FavourateCharacters", docId);
+  updateDoc(userRef, {
+    FirstName: FirstName,
+    LastName: LastName,
+    FavChar: FavChar
+  })
+  .then(() => {
+    console.log("Document updated successfully!");
+  })
+  .catch((error) => {
+    console.error("Error updating document: ", error);
+  });
+}
 
 
+
+// // Get the table element from the DOM
+//   const table = document.getElementById("myTable");
+
+//   // Create a header row
+//   const headerRow = table.insertRow();
+//   headerRow.insertCell().textContent = "FirstName";
+//   headerRow.insertCell().textContent = "LastName";
+
+//   // Create a query for the users collection
+//   const usersRef = collection(db, "FavourateCharacters");
+
+//   // Listen for new data in real-time
+//   onSnapshot(usersRef, (querySnapshot) => {
+//     // Clear existing data from the table
+//     while (table.rows.length > 1) {
+//       table.deleteRow(1);
+//     }
+
+//     // Add new data to the table
+//     querySnapshot.forEach((doc) => {
+//       const row = table.insertRow();
+//       row.insertCell().textContent = doc.data().FirstName;
+//       row.insertCell().textContent = doc.data().LastName;
+//     });
+//   }, (error) => {
+//     console.log("Error getting documents: ", error);
+// });
+
+
+// connectFirestoreEmulator(db, 'localhost', 8080);
+
+// Create
+// const saveBtn = document.querySelector('save')
+saveBtn.addEventListener("click", (e) => {
+    var FirstName = document.getElementById('FirstName').value;
+    var LastName = document.getElementById('LastName').value;
+    var FavChar = document.getElementById('FavChar').value;
+
+    addDoc(collection(db, "FavourateCharacters"), {
+      FirstName: FirstName,
+      LastName: LastName,
+      FavChar: FavChar
+    });
+
+    (Swal.fire({
+        icon: 'success',
+        title: 'Data Added Successfully',
+    }));;
+
+});
+
+// Read
+getDataBtn.addEventListener('click', async () => {
+const q = query(collection(db, "FavourateCharacters" ));
+const characters = await getDocs(q);
+characters.forEach((characters) => {
+  console.log(characters.data())
+});
+
+});
+
+// Update
+changeBtn.addEventListener('click', async () => {
+var FirstName = document.getElementById('FirstName').value;
+var LastName = document.getElementById('LastName').value;
+var FavChar = document.getElementById('FavChar').value;
+
+  const q = query(collection(db, "FavourateCharacters"));
+  const characters = await getDocs(q)
+  if(characters.empty){
+    console.log('No Data to Change')
+    return
+  }
+
+  await setDoc(doc(db, 'FavourateCharacters'.docs[0].id), {
+  FirstName: "696969",
+  LastName: "LastName",
+  FavChar: "FavChar"
+  }, { merge: true });
+
+});
+
+// Delete
+deleteBtn.addEventListener('click', async () => {
+  const q = query(collection(db, "FavourateCharacters"))
+  const characters = await getDocs(q)
+  if(characters.empty) {
+    console.log("No Data to Change")
+    return
+  }
+
+  await deleteDoc (doc(db, 'characters', characters.docs[characters.docs.length-1].id))
+  console.log("Deleted")
+})
+
+const q = query(collection(db, "characters"))
+
+const unsubscribe = onSnapshot(q, (querySnapshot) => {
+  console.log(`-----------------------------------------------------------------------------------`)
+  querySnapshot.forEach((characters) => {
+    console.log(characters.data())
+  })
+})
 
 </script>
+
+</html>
